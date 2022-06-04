@@ -1,0 +1,31 @@
+package com.spring.flux.handler;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
+
+import com.spring.flux.response.OrderResponse;
+import com.spring.flux.service.OrderService;
+
+import reactor.core.publisher.Mono;
+
+@Component
+public class OrderHandler {
+
+	@Autowired
+	private OrderService orderService;
+
+	public Mono<ServerResponse> getAllOrders(ServerRequest request) {
+		return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(orderService.getAllOrders(),
+				OrderResponse.class);
+	}
+
+	/*
+	 * public Mono<ServerResponse> getOne(ServerRequest request) { return
+	 * ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(orderService
+	 * .getById(), Order.class); }
+	 */
+
+}

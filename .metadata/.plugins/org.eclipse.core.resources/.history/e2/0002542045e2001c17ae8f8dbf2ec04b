@@ -1,0 +1,5 @@
+package com.spring.flux.repository;
+
+public interface OrderInterface {
+
+}

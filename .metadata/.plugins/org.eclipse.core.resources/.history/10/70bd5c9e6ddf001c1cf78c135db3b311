@@ -1,0 +1,17 @@
+package com.infybuzz.flux;
+
+import reactor.core.publisher.Flux;
+
+
+public class FirstFlux {
+
+	public static void main(String[] args) {
+
+		Flux<String> stringFlux = Flux.just("Aml", "Arp", "Lax");
+		stringFlux.subscribe(System.out::println);
+		
+		//concat
+		stringFlux.concatWithValues("Khu");
+	}
+
+}

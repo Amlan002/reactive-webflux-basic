@@ -1,0 +1,9 @@
+package com.infybuzz.flux;
+
+public class StreamToFlux {
+
+	public static void main(String[] args) {
+
+	}
+
+}

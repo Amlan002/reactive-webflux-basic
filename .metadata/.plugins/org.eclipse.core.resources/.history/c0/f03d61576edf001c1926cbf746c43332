@@ -1,0 +1,18 @@
+package com.infybuzz.flux;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import reactor.core.publisher.Flux;
+
+public class FirstFlux {
+	 private static final Logger logger = LogManager.getLogger(FirstFlux.class);
+	public static void main(String[] args) {
+
+		Flux<String> stringFlux = Flux.just("Aml", "Arp", "Lax");
+
+		// concat
+		stringFlux.concatWithValues("Khu");
+	}
+
+}

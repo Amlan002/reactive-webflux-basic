@@ -1,0 +1,14 @@
+package com.infybuzz.flux.scheduler;
+
+import com.infybuzz.flux.support.Order;
+
+import reactor.core.publisher.Flux;
+
+public class ImidiateScheduler {
+
+	public static void main(String[] args) {
+		Flux<Order> flux = Flux.just(new Order(1L, 100.0), new Order(2L, 200.0), new Order(3L, 300.0));
+
+	}
+
+}

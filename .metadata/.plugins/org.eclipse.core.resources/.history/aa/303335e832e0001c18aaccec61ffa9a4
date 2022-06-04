@@ -1,0 +1,9 @@
+package com.infybuzz.flux;
+
+public class MapWithFlux {
+
+	public static void main(String[] args) {
+
+	}
+
+}

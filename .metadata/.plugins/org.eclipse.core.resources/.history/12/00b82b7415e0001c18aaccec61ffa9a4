@@ -1,0 +1,22 @@
+package com.infybuzz.flux;
+
+import java.util.Optional;
+
+import reactor.core.publisher.Mono;
+
+public class OptionalMono {
+
+	public static void main(String[] args) {
+		Optional<String> optional = Optional.of("Amlan");
+		Mono<String> stringMono = Mono.justOrEmpty(optional);
+		System.out.println("optional to mono---------");
+		stringMono.subscribe(System.out::println);
+		
+		Optional<String> optionalEmpty = Optional.of("Amlan");
+		Mono<String> stringMonoEmpty = Mono.justOrEmpty(optionalEmpty);
+		System.out.println("empty optional to mono---------");
+		stringMonoEmpty.subscribe(System.out::println);
+
+	}
+
+}

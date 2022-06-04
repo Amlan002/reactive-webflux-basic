@@ -1,0 +1,5 @@
+package com.spring.flux.service;
+
+public class VideoService {
+
+}

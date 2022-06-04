@@ -1,0 +1,13 @@
+package com.infybuzz.flux;
+
+import reactor.core.publisher.Flux;
+
+public class EmptyFluxMono {
+
+	public static void main(String[] args) {
+		Flux<?> emptyFlux = Flux.empty();
+		System.out.println("Empty flux-------");
+		emptyFlux.subscribe(System.out::println);
+	}
+
+}

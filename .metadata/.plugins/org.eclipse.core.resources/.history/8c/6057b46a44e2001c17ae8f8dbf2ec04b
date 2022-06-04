@@ -1,0 +1,5 @@
+package com.spring.flux.entity;
+
+public class Order {
+
+}

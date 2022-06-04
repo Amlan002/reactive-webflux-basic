@@ -1,0 +1,13 @@
+package com.infybuzz.flux.scheduler;
+
+import reactor.core.publisher.Flux;
+
+public class FluxWithSelay {
+
+	public static void main(String[] args) {
+		Flux<Long> fLong = Flux.just(1L, 2L, 3L);
+		fLong.subscribe(System.out::println);
+
+	}
+
+}

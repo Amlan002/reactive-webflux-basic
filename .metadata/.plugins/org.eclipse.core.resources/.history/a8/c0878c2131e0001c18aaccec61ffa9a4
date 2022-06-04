@@ -1,0 +1,13 @@
+package com.infybuzz.flux;
+
+import reactor.core.publisher.Flux;
+
+public class FilterWithFlux {
+
+	public static void main(String[] args) {
+		Flux<String> stringFlux = Flux.just("am", "ar", "kh");
+		stringFlux.subscribe(System.out::println);
+
+	}
+
+}

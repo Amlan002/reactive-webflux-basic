@@ -1,0 +1,10 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/infybuzzlearningreactive
+    username: smssergeykargopolov
+    password: Welcome@1234
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update

@@ -1,0 +1,20 @@
+package com.spring.flux.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.flux.pojo.Order;
+
+import reactor.core.publisher.Flux;
+
+@RestController
+@RequestMapping("/api/order")
+public class OrderController {
+
+	@GetMapping("/getAll")
+	public Flux<Order> getAll() {
+		Flux<Order> flux = Flux.just(new Order(1L, 100.0), new Order(2L, 200.0), new Order(3L, 300.0));
+
+	}
+}

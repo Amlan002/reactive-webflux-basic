@@ -1,0 +1,10 @@
+package com.infybuzz.flux;
+
+public class EmptyFluxMono {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

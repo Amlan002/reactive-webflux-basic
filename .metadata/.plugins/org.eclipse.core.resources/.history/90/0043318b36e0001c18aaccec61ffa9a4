@@ -1,0 +1,16 @@
+package com.infybuzz.flux;
+
+import com.infybuzz.flux.support.Item;
+
+import reactor.core.publisher.Flux;
+
+public class FlateMapWithFlux {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+public static Flux<Item> getIt(){
+	
+}
+}

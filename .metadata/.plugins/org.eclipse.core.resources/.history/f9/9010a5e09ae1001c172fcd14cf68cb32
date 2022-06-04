@@ -1,0 +1,39 @@
+package com.infybuzz.flux;
+
+import org.reactivestreams.Subscription;
+
+import reactor.core.Exceptions;
+import reactor.core.publisher.BaseSubscriber;
+import reactor.core.publisher.Flux;
+
+public class BackPressureExample {
+
+	public static void main(String[] args) {
+		Flux<Integer> flux = Flux.range(1, 10).log();
+		System.out.println("==========All values=========");
+		flux.subscribe(System.out::println, ex -> ex.printStackTrace(), () -> System.out.println("Completed"));
+
+		System.out.println("==========only 5 values=========");
+		flux.subscribe(new BaseSubscriber<Integer>() {
+
+			protected void hookOnSubscribe(Subscription subscription) {
+				subscription.request(10);
+			}
+
+			protected void hookOnNext(Integer value) {
+				System.out.println("Value " + value);
+			}
+
+			// total value is 10 thats why Completed will not be printed, if the
+			// hookOnSubscribe's request param is 10 then Completed will be printed
+			protected void hookOnComplete() {
+				System.out.println("Completed");
+			}
+
+			protected void hookOnError(Throwable throwable) {
+				throwable.printStackTrace();
+			}
+		});
+	}
+
+}

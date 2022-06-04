@@ -1,0 +1,12 @@
+package com.infybuzz.flux;
+
+import reactor.core.publisher.Flux;
+
+public class BackPressureExample {
+
+	public static void main(String[] args) {
+		Flux<Integer> flux = Flux.range(1, 10).log();
+		flux.subscribe(System.out::printlb, ex -> ex.printStackTrace(), () -> System.out.println("Completed"));
+	}
+
+}

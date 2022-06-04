@@ -1,0 +1,17 @@
+package com.infybuzz.flux;
+
+import lombok.extern.slf4j.Slf4j;
+import reactor.core.publisher.Flux;
+
+@Slf4j
+public class FirstFlux {
+
+	public static void main(String[] args) {
+
+		Flux<String> stringFlux = Flux.just("Aml", "Arp", "Lax");
+
+		// concat
+		stringFlux.concatWithValues("Khu");
+	}
+
+}

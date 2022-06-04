@@ -1,0 +1,8 @@
+package com.spring.flux.router;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OrderRouter {
+
+}
